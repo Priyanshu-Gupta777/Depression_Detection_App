@@ -11,6 +11,8 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
 
+st.set_page_config(page_title="Mental Health Assessment", layout="wide")
+st.title("🧠 Mental Health Assessment")
 
 
 
@@ -34,7 +36,8 @@ def preprocess_user_text(text):
     text = remove_special_characters(text)
     text = lemmatize_text(text)
     return text
-def clean_texts(texts): return [preprocess_user_text(t) for t in texts]
+def clean_texts(texts):
+    return [preprocess_user_text(t) for t in texts]
 
 
 # NLTK setup
@@ -70,8 +73,8 @@ label_map = {0: "No Depression", 1: "Depression Risk"}
 
 # Page layout
 
-st.set_page_config(page_title="Mental Health Assessment", layout="wide")
-st.title("🧠 Mental Health Assessment")
+#st.set_page_config(page_title="Mental Health Assessment", layout="wide")
+#st.title("🧠 Mental Health Assessment")
 
 project_description = """
 A mental wellness app using **Natural Language Processing (NLP) and Machine Learning (ML)** to analyze text, identify signs of depression, and provide early insights for emotional health monitoring.
